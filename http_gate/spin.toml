@@ -1,13 +1,13 @@
+name = "http-gate"
 spin_version = "1"
-authors = ["mike"]
-description = "test1"
-name = "hello_spin"
+authors = ["mike tang <miketang848@gmail.com>"]
+description = "This is the http gate of the openforum application"
 trigger = { type = "http", base = "/" }
 version = "0.1.0"
 
 [[component]]
 id = "hello-spin"
-source = "target/wasm32-wasi/release/hello_spin.wasm"
+source = "target/wasm32-wasi/release/http_gate.wasm"
 [component.trigger]
 route = "/..."
 [component.build]
