@@ -6,9 +6,9 @@ trigger = {type = "redis", address = "redis://localhost:6379"}
 version = "0.1.0"
 
 [[component]]
-id = "echo-message"
-source = "target/wasm32-wasi/release/spinredis.wasm"
+id = "biz-worker"
+source = "target/wasm32-wasi/release/biz-worker.wasm"
 [component.trigger]
-channel="messages"
+channel="substrate2wasmengine"
 [component.build]
 command = "cargo build --target wasm32-wasi --release"
