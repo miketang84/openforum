@@ -1,13 +1,13 @@
 spin_version = "1"
 authors = ["Fermyon Engineering <engineering@fermyon.com>"]
 description = "A redis application."
-name = "spin-redis"
+name = "redis-worker"
 trigger = {type = "redis", address = "redis://localhost:6379"}
 version = "0.1.0"
 
 [[component]]
-id = "biz-worker"
-source = "target/wasm32-wasi/release/biz-worker.wasm"
+id = "redis-worker"
+source = "target/wasm32-wasi/release/redis-worker.wasm"
 [component.trigger]
 channel="substrate2wasmengine"
 [component.build]
